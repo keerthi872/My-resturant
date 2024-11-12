@@ -1,0 +1,146 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.tables-section, .menu-section {
+  flex: 1;
+  padding: 1.25rem;
+  overflow-y: auto;
+}
+
+.tables-section {
+  background-color: #f0f0f0;
+}
+
+.menu-section {
+  background-color: #ffffff;
+}
+
+input[type="text"] {
+  width: 95%;
+  padding: 0.625rem;
+  margin-bottom: 1.25rem;
+}
+
+.table-card, .menu-item {
+  background-color: #fff;
+  border: 0.0625rem solid #ddd;
+  padding: 0.625rem;
+  margin-bottom: 0.625rem;
+  cursor: pointer;
+}
+
+.table-card.highlight {
+  border: 0.125rem solid #4CAF50; 
+  background-color: #f0f8ff; 
+  transform: scale(1.05); 
+  transition: all 0.3s ease; 
+}
+
+.table-card.dragging {
+  opacity: 0.5;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 0rem;
+  border: 0.0625rem solid #888;
+  width: 50%;
+  border-radius: 0.625rem;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 1.75rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media (max-width: 48rem) {
+  .container {
+      flex-direction: column;
+  }
+}
+
+.textSubheading {
+  text-align: center;
+  font-weight: 600;
+}
+
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #007bff; /* Blue background */
+  color: black; /* Black text */
+  padding: 0.625rem;
+  border-bottom: 0.0625rem solid #888;
+  border-radius: 0.625rem 0.625rem 0 0; /* Rounded corners at the top of the modal */
+}
+
+.modal-table-title {
+  flex-grow: 1;
+  font-size: 1.5rem;
+}
+
+.close {
+  color: black;
+  font-size: 1.75rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.table-striped th, .table-striped td {
+  text-align: center;
+  border: none;
+}
+
+.modal-body input[type="number"] {
+  width: 3.75rem;
+  text-align: center;
+}
+
+.close-session {
+  align-items: right;
+  border: none;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end; 
+  margin-top: 1.25rem; 
+}
+
+
+.delete-icon {
+  border: none;
+  padding: 0.3125rem 0.625rem;
+  cursor: pointer;
+  border-radius: 0.3125rem;
+}
+
+
+.no-items {
+  text-align: center; 
+  color: #555; 
+}
